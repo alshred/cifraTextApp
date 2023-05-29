@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alvaro Moreno - 2023">
+    <meta name="copyright" content="CifraText">
+    <meta name="robots" content="index">
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" type="text/css" href="/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <!-- FUENTE LOGO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <title>CifraText app</title>
+  </head>
+  
+  <body class="light">
+    
+    <header class="header">
+      <img id="logo" src="/assets/logo.png" alt="Logo Alura">
+      <h1>CifraText</h1>
+      <label for="toggle" id="icon"><i class="fa-solid fa-moon"></i></label>      
+      <input type="checkbox" id="toggle">
+    </header>
+
+    <main class="main">      
+      <section class="input" id="container">
+        <textarea
+        id="text"
+        class="text-box valid"
+        required
+        placeholder="Ingresa texto aquí"></textarea>       
+        
+        <p class="condition">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Solo letras minúsculas y sin acentos          
+        </p>
+        <div class="buttons">
+          <button id="encrypt" class="encrypt" type="submit" onclick="capturEnc()">Encriptar</button>
+          <button id="desencrypt" class="desencrypt" type="submit" onclick="desEnc()">Desencriptar</button>
+        </div>
+      </section>
+
+      <section class="output">
+        <img class="img" id="img" src="/assets/nofound.png" alt="Sin Texto">
+        <p id="text-out" class="text-out">
+          <strong>Ningún mensaje fue encontrado</strong>
+          <br><br>
+          <small>Ingresa el texto que deseas encriptar o desencriptar.</small>
+        </p>
+        <button class="copy hide" id="copy">Copiar</button>
+      </section>
+    </main>
+
+    <footer>
+      <small>App desarrollada por Alvaro Moreno - 2023</small>
+      <a href="https://github.com/alshred" target="_blank"><i id="github" class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/alvaro-moreno-developer/" target="_blank"><i id="linkedin" class="fa-brands fa-linkedin"></i></a>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/e2f3563a69.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

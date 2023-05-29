@@ -1,0 +1,281 @@
+/* ESTILOS BODY */
+
+.light {
+  background-color: #F3F5FC;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #0A3871;
+  transition: all 1.5s ease;
+}
+
+.dark {
+  background-color: #061F3D;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #F3F5FC;
+  transition: all 1.5s ease;
+}
+
+
+/* ESTILOS HEADER */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 10px 25px 10px;
+  justify-content: space-around;
+}
+
+.header img {
+  height: 30px;
+  padding-top: 4px;
+  transition: all 1.5s ease;
+}
+
+.header h1 {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 35px;
+}
+
+.header i {
+  font-size: 25px;
+  padding-top: 6px;
+  cursor: pointer;
+}
+
+.header i:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+
+/* ESTILOS MAIN */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ESTILOS SECCIÓN ENTRADA TEXTO */
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-box {
+  width: 75vw;
+  height: 18px;
+  margin-top: 30px;
+  padding: 10px;
+  outline: none;
+  resize: none;
+  font-size: 15px;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #F3F5FC;
+  border-color: #F3F5FC;
+}
+
+.valid {
+  color: #0A3871;
+}
+
+.valid:is(:focus) {
+  border-color: #0A3871;
+  outline: 0;
+}
+
+.error{
+  color: red;
+}
+
+.error:is(:focus) {
+  border: 1px solid red;
+  outline: 0;
+}
+
+.text-box::-webkit-scrollbar {
+  width: 0px;  
+}
+
+.condition {
+  margin: 5px;
+  font-size: 11px;
+  align-self: center;
+  margin-bottom: 40px;
+}
+
+.condition-error {
+  padding-top: 5px;
+  color: red;
+  font-size: 14px;
+}
+
+
+/* ESTILOS BOTONES */
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons button, .copy {
+  width: 60vw;
+  padding: 8px 0;
+  margin-bottom: 20px;
+  border: 1px solid #0A3871;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  transition: 0.7s all;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.encrypt {
+  background-color: #0A3871;
+  color: #F3F5FC;;
+}
+
+.desencrypt, .copy {
+  color: #0A3871;
+}
+
+
+/* ESTILOS SECCIÓN SALIDA TEXTO */
+
+.output {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 75vw;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.text-out {
+  text-align: center;
+  color: #0A3871;;
+  padding: 20px;
+}
+
+.img {
+  display: none;
+}
+
+.text-out strong {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.text-out small {
+  font-size: 15px;
+}
+
+.copy {  
+  align-self: center;
+}
+
+.copy:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+/* ESTILOS FOOTER */
+
+footer {
+  border-top: 1px solid #0A3871;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+footer small {
+  font-style: italic;
+  font-size: 12px;
+}
+
+footer i {
+  font-size: 12px;
+  color : #0A3871;
+  padding-bottom: 4px;
+  transition: all 1.5s ease;
+}
+
+/* OCULTAR ELEMENTOS */
+
+.hide, #toggle {
+  display: none;
+}
+
+
+/* MEDIA QUERIES - TABLET */
+
+@media only screen and (min-width: 768px) {
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    gap: 30px;
+  }
+
+  .copy {
+    width: 30vw;
+  }  
+}
+
+
+/* MEDIA QUERIES - DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+  
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10vw;
+  }
+
+  .input {
+    align-self: flex-start;
+  }
+
+  .text-box {
+    width: 35vw;
+  }
+
+  .buttons {
+    width: 35vw;    
+  }
+
+  .buttons button, .copy {
+    width: 15vw;
+  }
+
+  .output {
+    width: 35vw; 
+  }
+
+  .img {
+    display: inline;
+    align-self: center;
+    margin: 15px;
+    width: 60%;
+  }
+
+  .hide {
+    display: none;
+  }
+}
